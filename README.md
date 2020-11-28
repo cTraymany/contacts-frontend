@@ -6,10 +6,10 @@ This Rails with React-Redux application allows users to organize their contacts 
 ### Prerequisites
 This app is run with React-Redux and Javascript. Please have both libraries installed before beginning.
 
-Fork and clone this repository onto your terminal.
+Fork and clone the backend and frontend repositories (linked below) onto your terminal.
 
-Navigate to https://github.com/cTraymany/contacts-backend.
-Fork and clone this respository onto your terminal.
+https://github.com/cTraymany/contacts-backend
+https://github.com/cTraymany/contacts-frontend
 
 ### Installing
     <!-- Backend -->
@@ -20,7 +20,7 @@ Fork and clone this respository onto your terminal.
     <!-- Frontend -->
     $ npm start
 
-    You will be prompted to start in a new server. Enter 'Y' and the application will be opened in the browser.
+    You will be prompted to start in a new server. Enter 'Y' and the application will be opened in the browser. Otherwise, proceed with the link provided in the terminal.
 
 ### Built With
 [VS Code](https://code.visualstudio.com/) - text editor
