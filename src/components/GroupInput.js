@@ -15,7 +15,11 @@ class GroupInput extends React.Component {
     }
 
     onSubmit = (event) => {
-       
+       event.preventDefault()
+       this.props.addGroup(this.state)
+       this.setState({
+           name: ""
+       })
     }
 
     render() {
