@@ -13,6 +13,7 @@ class GroupsContainer extends React.Component {
     render() {
         return (
             <div>
+                <h1>My Groups</h1>
                 <GroupInput />
                 <Groups groups={this.props.groups} />
             </div>

@@ -4,7 +4,7 @@ const Groups = (props) => {
 
     return(
         <div>
-            Groups
+            {props.groups.map(group => <h2 key={group.id}>{group.name}</h2>)}
         </div>
     )
 }
