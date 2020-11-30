@@ -1,5 +1,10 @@
 export function fetchGroups() {
-    // fetch("http://localhost:3000/groups")
-    //     .then(resp => resp.json())
-    //     .then(data => console.log(data))
+    return (dispatch) => {
+        fetch("http://localhost:3000/groups")
+            .then(resp => resp.json())
+            .then(groups => dispatch({
+                type: "FETCH_GROUPS",
+                payload: groups
+            }))
+    }
 }
