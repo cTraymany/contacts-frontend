@@ -1,6 +1,7 @@
 import React from 'react'
 import GroupInput from './../components/GroupInput'
 import Groups from './../components/Groups'
+import {connect} from 'react-redux'
 
 class GroupsContainer extends React.Component {
 
@@ -14,4 +15,4 @@ class GroupsContainer extends React.Component {
     }
 }
 
-export default GroupsContainer
+export default connect()(GroupsContainer)
