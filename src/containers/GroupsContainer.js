@@ -5,6 +5,10 @@ import {connect} from 'react-redux'
 
 class GroupsContainer extends React.Component {
 
+    componentDidMount() {
+        
+    }
+
     render() {
         return (
             <div>
@@ -12,6 +16,12 @@ class GroupsContainer extends React.Component {
                 <Groups />
             </div>
         )
+    }
+}
+
+const mapStateToProps = state => {
+    return{
+        groups: state.groups
     }
 }
 
