@@ -1,4 +1,5 @@
 import React from 'react'
+import ContactsContainer from '../containers/ContactsContainer'
 
 const Group = (props) => {
     const group = props.groups.find(group => {
@@ -7,6 +8,7 @@ const Group = (props) => {
     return (
         <div>
             <h2>{group && group.name}</h2>
+            <ContactsContainer />
         </div>
     )
 }
