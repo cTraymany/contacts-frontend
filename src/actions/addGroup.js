@@ -8,5 +8,7 @@ export const addGroup = (data) => {
             method: 'POST',
             body: JSON.stringify(data)
         })
+        .then(resp => resp.json())
+        .then(group => dispatch({type: "ADD_GROUP", payload: group}))
     }
 }
