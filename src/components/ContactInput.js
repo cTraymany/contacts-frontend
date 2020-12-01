@@ -17,7 +17,7 @@ class ContactInput extends React.Component {
 
     onSubmit = (event) => {
         event.preventDefault()
-        
+        // this.props.addContact(this.state)
     }
 
     render() {
