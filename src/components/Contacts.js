@@ -2,7 +2,6 @@ import React from 'react'
 
 const Contacts = (props) => {
     // console.log(props)
-
     return(
         <div>
             {props.contacts && props.contacts.map(contact => {

@@ -18,7 +18,7 @@ class ContactInput extends React.Component {
 
     onSubmit = (event) => {
         event.preventDefault()
-        this.props.addContact(this.state, this.props.id)
+        this.props.addContact(this.state, parseInt(this.props.group.id))
         this.setState({
             name: "",
             phoneNumber: "",
@@ -27,7 +27,7 @@ class ContactInput extends React.Component {
     }
 
     render() {
-        console.log(Date.now())
+        console.log("contact input", this.props.group)
         return(
             <form onSubmit={this.onSubmit}>
                 <label>Name: </label><br />

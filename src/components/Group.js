@@ -2,15 +2,14 @@ import React from 'react'
 import ContactsContainer from '../containers/ContactsContainer'
 
 const Group = (props) => {
-    const groupArray = props.groups.data.filter(group => {
+   const group = props.groups.data.filter(group => {
         return group.attributes.name.toLowerCase() === props.match.params.name.toLowerCase()
     })
 
-    const group = groupArray[0]
     return (
         <div>
-            <h2>{group && group.attributes.name}</h2>
-            <ContactsContainer group={group}/>
+            <h2>{group && group[0] && group[0].attributes.name}</h2>
+            <ContactsContainer group={group[0]}/>
         </div>
     )
 }
