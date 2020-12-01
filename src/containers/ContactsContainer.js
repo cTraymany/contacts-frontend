@@ -5,11 +5,11 @@ import Contacts from '../components/Contacts'
 
 export default class ContactsContainer extends React.Component {
     render() {
-        console.log(this.props)
+        // console.log(this.props)
         return(
             <div>
                 <ContactInput />
-                <Contacts />
+                <Contacts contacts={this.props.group && this.props.group.attributes.contacts} />
             </div>
         )
     }
