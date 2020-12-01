@@ -8,7 +8,7 @@ export default class ContactsContainer extends React.Component {
         // console.log(this.props)
         return(
             <div>
-                <ContactInput />
+                <ContactInput group={this.props.group} />
                 <Contacts contacts={this.props.group && this.props.group.attributes.contacts} />
             </div>
         )
