@@ -5,9 +5,9 @@ import {Link} from 'react-router-dom'
 const Groups = (props) => {
     return(
         <div>
-            {props.groups.map(group =>
+            {props.groups.data.map(group =>
                 <h3 key={group.id}>
-                    <Link to={`/groups/${group.name}`}>{group.name}</Link>
+                    <Link to={`/groups/${group.attributes.name.toLowerCase()}`}>{group.attributes.name}</Link>
                 </h3>)}
         </div>
     )
