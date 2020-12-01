@@ -1,13 +1,12 @@
 import React from 'react'
 
 const Contacts = (props) => {
-    console.log(props)
-    // const contacts = 
+    // console.log(props)
 
     return(
         <div>
             {props.contacts && props.contacts.map(contact => {
-                return <h3>{contact.attributes.name}</h3>
+                return <h3 key={contact.id}>{contact.attributes.name}</h3>
             })}
         </div>
     )
