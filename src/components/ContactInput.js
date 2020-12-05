@@ -27,7 +27,7 @@ class ContactInput extends React.Component {
     }
 
     render() {
-        console.log("contact input", this.props.group)
+        // console.log("contact input", this.props.group)
         return(
             <form onSubmit={this.onSubmit}>
                 <label>Name: </label><br />
