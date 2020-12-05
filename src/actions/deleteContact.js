@@ -7,8 +7,11 @@ export const deleteContact = (groupId, contactId) => {
             return resp.json()
         })
         .then(group => {
-            // debugger
-            return dispatch({type: "DELETE_CONTACT", payload: group})
+            if (group.error) {
+                alert(group.error)
+            } else {
+                dispatch({type: "DELETE_CONTACT", payload: group})
+            }
         })
     }
 }
