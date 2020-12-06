@@ -20,13 +20,14 @@ class GroupInput extends React.Component {
        this.setState({
            name: ""
        })
+       this.props.history.push("/groups")
     }
 
     render() {
         return(
             <form onSubmit={this.onSubmit}>
                 <label>Create a Group: </label>
-                <input onChange={this.onChange} type="text" placeholder="Group Name" value={this.state.name} ></input>
+                <input onChange={this.onChange} type="text" placeholder="Group Name" value={this.state.name} required ></input>
                 <input type="submit"></input>
             </form>
         )
