@@ -18,7 +18,7 @@ class GroupsContainer extends React.Component {
             <div>
                 <h1>Contact Book</h1>
                 <Switch>
-                    <Route path='/groups/new' component={GroupInput} />
+                    <Route exact path='/groups/new' component={GroupInput} />
                     <Route exact path='/groups/:name/new' render={(routerProps) => <ContactInput {...routerProps} groups={this.props.groups} />} />
                     <Route exact path='/groups/:name' render={(routerProps) => <Group {...routerProps} groups={this.props.groups}/>} />
                     <Route exact path='/groups' render={(routerProps) => <Groups {...routerProps} groups={this.props.groups} />} />

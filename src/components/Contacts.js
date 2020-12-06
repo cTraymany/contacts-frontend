@@ -12,10 +12,13 @@ const Contacts = (props) => {
         <div>
             {props.contacts && props.contacts.map(contact => {
                 return(
-                    <div key={contact.id}>
-                        <h3>{contact.attributes && contact.attributes.name} <button onClick={() => deleteContact(contact)}>X</button></h3>
-                        <p>{contact.attributes && contact.attributes.phoneNumber}</p>
-                        <p>{contact.attributes && contact.attributes.birthday}</p>
+                    <div>
+                        {/* <Link to create new contact /> */}
+                        <div key={contact.id}>
+                            <h3>{contact.attributes && contact.attributes.name} <button onClick={() => deleteContact(contact)}>X</button></h3>
+                            <p>{contact.attributes && contact.attributes.phoneNumber}</p>
+                            <p>{contact.attributes && contact.attributes.birthday}</p>
+                        </div>
                     </div>
                 )
             })}
@@ -24,5 +27,3 @@ const Contacts = (props) => {
 }
 
 export default connect(null, {deleteContact})(Contacts)
-
-// CHANGE TO RENDER CONTACT COMPONENT
