@@ -15,7 +15,7 @@ class GroupsContainer extends React.Component {
 
     render() {
         return (
-            <div>
+            <>
                 <h1>Contact Book</h1>
                 <Switch>
                     <Route exact path='/groups/new' component={GroupInput} />
@@ -23,7 +23,7 @@ class GroupsContainer extends React.Component {
                     <Route exact path='/groups/:name' render={(routerProps) => <Group {...routerProps} groups={this.props.groups}/>} />
                     <Route exact path='/groups' render={(routerProps) => <Groups {...routerProps} groups={this.props.groups} />} />
                 </Switch>
-            </div>
+            </>
         )
     }
 }

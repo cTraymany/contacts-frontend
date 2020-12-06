@@ -7,10 +7,10 @@ const Group = (props) => {
     })
 
     return (
-        <div>
+        <>
             <h2>{group && group[0] && group[0].attributes.name}</h2>
             <ContactsContainer group={group[0]}/>
-        </div>
+        </>
     )
 }
 
