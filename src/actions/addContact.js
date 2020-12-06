@@ -9,7 +9,11 @@ export const addContact = (contact, groupId) => {
         })
         .then(resp => resp.json())
         .then(group => {
-            return dispatch({type: "ADD_CONTACT", payload: group})
+            if (group.error) {
+                alert(group.error)
+            } else {
+                return dispatch({type: "ADD_CONTACT", payload: group})
+            }
         })
     }
 }

@@ -20,7 +20,6 @@ export default function groupReducer(state = {groups: {data: []}}, action) {
                     if (data.id === group.id) {
                         return group
                     } else {
-                        // debugger
                         return data
                     }
                 })}
