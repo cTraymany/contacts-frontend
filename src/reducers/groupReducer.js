@@ -4,9 +4,10 @@ export default function groupReducer(state = {groups: {data: []}}, action) {
             return {groups: action.payload}
         
         case "ADD_GROUP":
+            // debugger
             return {
                 ...state,
-                groups: {data: [...state.groups.data, action.payload]}
+                groups: {data: [...state.groups.data, action.payload.data]}
             }
 
         case "ADD_CONTACT":
