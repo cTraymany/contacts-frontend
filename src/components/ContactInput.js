@@ -28,7 +28,6 @@ class ContactInput extends React.Component {
             phoneNumber: "",
             birthday: ""
         })
-        console.log(group)
         this.props.history.push(`/groups/${group[0].attributes.name.toLowerCase()}`)
     }
     render() {
