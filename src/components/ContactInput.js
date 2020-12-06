@@ -17,17 +17,21 @@ class ContactInput extends React.Component {
     }
 
     onSubmit = (event) => {
+        const group = this.props.groups.data.filter(group => {
+            return group.attributes.name.toLowerCase() === this.props.match.params.name.toLowerCase()
+        })
+        
         event.preventDefault()
-        this.props.addContact(this.state, parseInt(this.props.group.id))
+        this.props.addContact(this.state, parseInt(group[0].id))
         this.setState({
             name: "",
             phoneNumber: "",
             birthday: ""
         })
+        console.log(group)
+        this.props.history.push(`/groups/${group[0].attributes.name.toLowerCase()}`)
     }
-
     render() {
-        // console.log("contact input", this.props.group)
         return(
             <form onSubmit={this.onSubmit}>
                 <label>Name: </label><br />
