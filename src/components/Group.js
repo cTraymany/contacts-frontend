@@ -9,7 +9,7 @@ const Group = (props) => {
     return (
         <>
             <h2>{group && group[0] && group[0].attributes.name}</h2>
-            <ContactsContainer group={group[0]}/>
+            <ContactsContainer match={props.match} group={group[0]}/>
         </>
     )
 }
