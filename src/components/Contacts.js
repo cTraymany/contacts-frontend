@@ -10,7 +10,7 @@ const Contacts = (props) => {
         props.deleteContact(contact.attributes.group_id, parseInt(contact.id))
     }
 
-    const formatBirthday = (birthday) => {
+    const showBirthday = (birthday) => {
         let newBirthday = birthday.split('-')
         let dateToFormat = new Date(newBirthday[0], newBirthday[1], newBirthday[2])
         let month = dateToFormat.toLocaleString('en-us', { month: 'short' })
@@ -23,7 +23,7 @@ const Contacts = (props) => {
         
     }
 
-    const numberIsPresent = (number) => {
+    const showNumber = (number) => {
         if (number) {
             let parseNum = number.split('-')
             return (
@@ -37,8 +37,8 @@ const Contacts = (props) => {
             {props.contacts && props.contacts.map(contact => (
                 <div key={contact.id} className="contact" >
                     <h5>{contact.attributes && contact.attributes.name} <small onClick={() => deleteContact(contact)}>☒</small></h5>
-                    <p>{contact.attributes && numberIsPresent(contact.attributes.phoneNumber)}</p>
-                    <p>{contact.attributes && formatBirthday(contact.attributes.birthday)}</p><br/>
+                    <p>{contact.attributes && showNumber(contact.attributes.phoneNumber)}</p>showNumber
+                    <p>{contact.attributes && showBirthday(contact.attributes.birthday)}</p><br/>
                 </div>
             ))}
             <Link to={`/groups/${props.match.params.name}/new`}><Button>Add Contact</Button></Link>
