@@ -5,9 +5,9 @@ const Groups = (props) => {
     return(
         <>
             {props.groups.data && props.groups.data.map(group =>
-                <h3 key={group.id}>
+                <h5 key={group.id}>
                     <Link to={`/groups/${group.attributes && group.attributes.name.toLowerCase()}`}>{group.attributes && group.attributes.name}</Link>
-                </h3>)}
+                </h5>)}
         </>
     )
 }
