@@ -2,6 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {deleteContact} from '../actions/deleteContact'
 import {Link} from 'react-router-dom'
+import Button from 'react-bootstrap/Button';
 
 const Contacts = (props) => {
 
@@ -13,12 +14,12 @@ const Contacts = (props) => {
         <>
             {props.contacts && props.contacts.map(contact => (
                 <div key={contact.id} className="contact" >
-                    <h3>{contact.attributes && contact.attributes.name} <button onClick={() => deleteContact(contact)}>X</button></h3>
+                    <h3>{contact.attributes && contact.attributes.name} <Button onClick={() => deleteContact(contact)}>X</Button></h3>
                     <p>{contact.attributes && contact.attributes.phoneNumber}</p>
                     <p>{contact.attributes && contact.attributes.birthday}</p>
                 </div>
             ))}
-            <Link to={`/groups/${props.match.params.name}/new`}><button>Add Contact</button></Link>
+            <Link to={`/groups/${props.match.params.name}/new`}><Button>Add Contact</Button></Link>
         </>
     )
 }
