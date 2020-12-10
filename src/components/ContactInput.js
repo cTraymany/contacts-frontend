@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addContact} from '../actions/addContact'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button'
 
 class ContactInput extends React.Component {
 
@@ -32,7 +34,7 @@ class ContactInput extends React.Component {
     }
     render() {
         return(
-            <form onSubmit={this.onSubmit}>
+            <Form onSubmit={this.onSubmit}>
                 <label>Name: </label><br />
                 <input
                     type="text"
@@ -55,8 +57,8 @@ class ContactInput extends React.Component {
                     name="birthday"
                     max={Date.now()}
                     onChange={this.onChange}></input><br /><br />
-                <input type="submit"></input>
-            </form>
+                <Button type="submit">Submit</Button>
+            </Form>
         )
     }
 }

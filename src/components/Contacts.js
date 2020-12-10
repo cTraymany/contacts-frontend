@@ -2,7 +2,7 @@ import React from 'react'
 import {connect} from 'react-redux'
 import {deleteContact} from '../actions/deleteContact'
 import {Link} from 'react-router-dom'
-import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button'
 
 const Contacts = (props) => {
 
