@@ -1,6 +1,8 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {addGroup} from '../actions/addGroup'
+import Form from 'react-bootstrap/Form'
+import Button from 'react-bootstrap/Button';
 
 class GroupInput extends React.Component {
 
@@ -25,11 +27,11 @@ class GroupInput extends React.Component {
 
     render() {
         return(
-            <form onSubmit={this.onSubmit}>
-                <label>Create a Group: </label>
-                <input onChange={this.onChange} type="text" placeholder="Group Name" value={this.state.name} required ></input>
-                <input type="submit"></input>
-            </form>
+            <Form onSubmit={this.onSubmit}>
+                <label>Name: </label><br />
+                <input onChange={this.onChange} type="text" placeholder="Group Name" value={this.state.name} required ></input><br /><br />
+                <Button type="submit">Submit</Button>
+            </Form>
         )
     }
 }
