@@ -9,7 +9,7 @@ class ContactInput extends React.Component {
     state = {
         name: "",
         phoneNumber: "",
-        birthday: ""
+        birthday: "",
     }
 
     onChange = (event) => {
