@@ -37,7 +37,7 @@ const Contacts = (props) => {
             {props.contacts && props.contacts.map(contact => (
                 <div key={contact.id} className="contact" >
                     <h5>{contact.attributes && contact.attributes.name} <small onClick={() => deleteContact(contact)}>☒</small></h5>
-                    <p>{contact.attributes && showNumber(contact.attributes.phoneNumber)}</p>showNumber
+                    <p>{contact.attributes && showNumber(contact.attributes.phoneNumber)}</p>
                     <p>{contact.attributes && showBirthday(contact.attributes.birthday)}</p><br/>
                 </div>
             ))}
