@@ -6,11 +6,6 @@ import Button from 'react-bootstrap/Button'
 import Contact from './Contact'
 
 const Contacts = (props) => {
-
-    const deleteContact = (contact) => {
-        props.deleteContact(contact.attributes.group_id, parseInt(contact.id))
-    }
-
     return(
         <>
             {props.contacts && props.contacts.map(contact => (
