@@ -24,15 +24,6 @@ const Contacts = (props) => {
         
     }
 
-    const showNumber = (number) => {
-        if (number) {
-            let parseNum = number.split('-')
-            return (
-                `Phone: (${parseNum[0]}) ${parseNum[1]}-${parseNum[2]}`
-            )
-        }
-    }
-
     return(
         <>
             {props.contacts && props.contacts.map(contact => (
