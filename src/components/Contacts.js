@@ -11,19 +11,6 @@ const Contacts = (props) => {
         props.deleteContact(contact.attributes.group_id, parseInt(contact.id))
     }
 
-    const showBirthday = (birthday) => {
-        let newBirthday = birthday.split('-')
-        let dateToFormat = new Date(newBirthday[0], newBirthday[1], newBirthday[2])
-        let month = dateToFormat.toLocaleString('en-us', { month: 'short' })
-
-        if (birthday) {
-            return (
-                `Birthday: ${month} ${newBirthday[1]}, ${newBirthday[0]}`
-            )
-        }
-        
-    }
-
     return(
         <>
             {props.contacts && props.contacts.map(contact => (
