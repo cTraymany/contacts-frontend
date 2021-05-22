@@ -28,7 +28,7 @@ const Contact = ({contact}) => {
         return (
             <>
                 <div key={contact.id} className="contact" >
-        <h5>{contact.attributes && contact.attributes.name} </h5><button onClick={()=> setUpvote(upvote + 1)}>{upvote}</button>
+                    <h5>{contact.attributes && contact.attributes.name} </h5><button onClick={()=> setUpvote(upvote + 1)}>{upvote}</button>
                     <p>{contact.attributes && showNumber(contact.attributes.phoneNumber)}</p>
                     <p>{contact.attributes && showBirthday(contact.attributes.birthday)}</p><br/>
                 </div>
