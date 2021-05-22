@@ -1,7 +1,4 @@
-import React, {useState} from 'react'
-
 const Contact = ({contact}) => {
-    const [upvote, setUpvote] = useState(0)
 
     const showBirthday = (birthday) => {
         let newBirthday = birthday.split('-')
@@ -13,7 +10,6 @@ const Contact = ({contact}) => {
                 `Birthday: ${month} ${newBirthday[1]}, ${newBirthday[0]}`
             )
         }
-        
     }
 
     const showNumber = (number) => {
@@ -26,13 +22,11 @@ const Contact = ({contact}) => {
     }
 
         return (
-            <>
-                <div key={contact.id} className="contact" >
-                    <h5>{contact.attributes && contact.attributes.name} </h5><button onClick={()=> setUpvote(upvote + 1)}>{upvote}</button>
-                    <p>{contact.attributes && showNumber(contact.attributes.phoneNumber)}</p>
-                    <p>{contact.attributes && showBirthday(contact.attributes.birthday)}</p><br/>
-                </div>
-            </>
+            <div key={contact.id} className="contact" >
+                <h5>{contact.attributes && contact.attributes.name} </h5>
+                <p>{contact.attributes && showNumber(contact.attributes.phoneNumber)}</p>
+                <p>{contact.attributes && showBirthday(contact.attributes.birthday)}</p><br/>
+            </div>
         )
 
 }
