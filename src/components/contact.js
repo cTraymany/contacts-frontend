@@ -1,5 +1,10 @@
 const Contact = ({contact}) => {
 
+    const deleteContact = (contact) => {
+        console.log(contact)
+    //     props.deleteContact(contact.attributes.group_id, parseInt(contact.id))
+    }
+
     const showBirthday = (birthday) => {
         let newBirthday = birthday.split('-')
         let dateToFormat = new Date(newBirthday[0], newBirthday[1], newBirthday[2])
@@ -21,9 +26,10 @@ const Contact = ({contact}) => {
         }
     }
 
+
         return (
             <div key={contact.id} className="contact" >
-                <h5>{contact.attributes && contact.attributes.name} </h5>
+                <h5>{contact.attributes && contact.attributes.name} <small onClick={() => deleteContact(contact)}>☒</small></h5>
                 <p>{contact.attributes && showNumber(contact.attributes.phoneNumber)}</p>
                 <p>{contact.attributes && showBirthday(contact.attributes.birthday)}</p><br/>
             </div>
